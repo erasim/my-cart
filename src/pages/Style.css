@@ -1,0 +1,29 @@
+.footer{
+    margin-top: 1%;
+    width: calc(98%);
+    padding: 1%;
+    position: relative;
+    float: left;
+    background-color: rgb(5, 194, 165);
+    height: calc(100%);
+    border-radius: 10px;
+}
+.sideBar{
+    width: calc(28%);
+padding: 1%;
+position: relative;
+float: left;
+    background-color: rgb(229, 222, 17);
+   
+    border-radius: 10px;
+}
+.Rightbox{
+    margin-top: 0px;
+    padding: 1%;
+    width: calc(67.8%);
+    position: relative;
+    float: right;
+    background-color: rgb(65, 164, 48);
+text-align: justify;   
+    border-radius: 10px;
+}
