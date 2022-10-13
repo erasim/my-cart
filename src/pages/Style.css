@@ -24,6 +24,7 @@ float: left;
     position: relative;
     float: right;
     background-color: rgb(65, 164, 48);
-text-align: justify;   
+     text-align: center;   
     border-radius: 10px;
+    text-align: justify;
 }
