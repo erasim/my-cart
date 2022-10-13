@@ -28,3 +28,17 @@ float: left;
     border-radius: 10px;
     text-align: justify;
 }
+.Allitems{
+    background-color: bisque;
+
+}
+.Allitems ul{ list-style-type: none;
+    }
+   card{
+    width: 25%;
+   }
+    Card.Img{
+        width: 100%;
+    }
+
+   Card.img
