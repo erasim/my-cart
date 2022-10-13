@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Footer from "./pages/Footer";
 import SideBar from "./pages/SideBar";
+import ShopNow from "./pages/ShopNow";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <h1>Welcome to My Shoppoing Cart</h1>
       
       <ul className="links">
+      <li><Link to="/shop">Shop</Link></li>
         <li><Link to="/">Home</Link></li>
      <li><Link to="/about">About</Link></li>
     <li>  <Link to="/contact">Contact</Link></li>
@@ -30,6 +32,8 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
+        <Route path="shop" element={<ShopNow />} />
+
       </Routes> 
      
       <SideBar/>
