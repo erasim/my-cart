@@ -9,36 +9,65 @@
     border-radius: 10px;
 }
 .sideBar{
+    text-align: center;
     width: calc(28%);
-padding: 1%;
-position: relative;
-float: left;
+   padding: 1%;
+    float: left; 
     background-color: rgb(229, 222, 17);
-   
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+  
 }
+
 .Rightbox{
+    /* min-height: 464px; */
     margin-top: 0px;
     padding: 1%;
     width: calc(67.8%);
     position: relative;
     float: right;
-    background-color: rgb(65, 164, 48);
+    /* background-color: rgb(65, 164, 48); */
      text-align: center;   
     border-radius: 10px;
     text-align: justify;
 }
 .Allitems{
-    background-color: bisque;
+    /* background-color: bisque; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 10px;
+
 
 }
-.Allitems ul{ list-style-type: none;
-    }
-   card{
-    width: 25%;
-   }
-    Card.Img{
-        width: 100%;
-    }
+.card{border: 2px solid black; width: 30%;
+text-align: center;
 
-   Card.img
+}
+
+.card-img-top{width: 290px;height: 240px;
+
+}
+.card-title{
+    font-weight: bold;
+    height: 60px;
+}
+.card .btn-primary{
+    width: 90%;
+    vertical-align: bottom;
+    font-size: larger;
+    color: black;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    padding: 2%;
+    margin-top: 5px;
+    
+   
+}
+.card :hover{
+    width: 100%;
+}
+
+
+   

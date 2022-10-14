@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Card ,Button} from 'react-bootstrap'
-import {Link} from "react-router-dom"
 
 
-export default function ShopNow() {
-  const [Users, fetchUsers] = useState([])
-  const openInNewTab = url => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
+export default function ItemsDetails(props) {
+  const [Users, fetchUsers] = useState([]);
+
+
   const getData = () => {
-    fetch('https://fakestoreapi.com/products')
+    fetch('https://fakestoreapi.com/products/{prop.ItemId}')
       .then((res) => res.json())
       .then((res) => {
         console.log(res)
@@ -35,12 +33,8 @@ export default function ShopNow() {
             {/* <Card.Text>
               {item.description}
             </Card.Text> */}
-            {
-         
-            console.log(item.id)}
-            <Button variant="primary">Buy Now</Button><br/>
-            <Link to="">Shop</Link>
-            <Button variant="primary" onClick={() => openInNewTab('./shop/{item.id}')}>Get Details</Button>
+            <Button variant="primary">Buy Now</Button>
+            <Button variant="primary">Get Details</Button>
           </Card.Body>
         </Card>
 

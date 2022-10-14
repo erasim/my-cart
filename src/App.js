@@ -10,6 +10,7 @@ import Signup from "./pages/Signup";
 import Footer from "./pages/Footer";
 import SideBar from "./pages/SideBar";
 import ShopNow from "./pages/ShopNow";
+import ItemsDetails from "./pages/ItemsDetails";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
     
     
   </ul>
+  <div className="mainbar">
 <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
@@ -33,10 +35,12 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="shop" element={<ShopNow />} />
+        <Route path="item" element={<ItemsDetails />} />
 
       </Routes> 
      
       <SideBar/>
+      </div>
       <Footer/>
     </div>
   );
