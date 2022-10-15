@@ -12,10 +12,14 @@ import SideBar from "./pages/SideBar";
 import ShopNow from "./pages/ShopNow";
 import ItemsDetails from "./pages/ItemsDetails";
 
+
 function App() {
+ 
+ 
   return (
     <div className="App">
-      <h1>Welcome to My Shoppoing Cart</h1>
+     
+      <h1>Welcome to My Shoppoing Cart </h1>
       
       <ul className="links">
       <li><Link to="/shop">Shop</Link></li>
@@ -24,6 +28,8 @@ function App() {
     <li>  <Link to="/contact">Contact</Link></li>
     <li  > < Link to="/login" >Login</Link></li>
     <li >  <Link to="/signup">SignUp</Link></li>
+    <li >  <Link to="/items">Items</Link></li>
+ 
     
     
   </ul>
@@ -35,11 +41,12 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="shop" element={<ShopNow />} />
-        <Route path="item" element={<ItemsDetails />} />
+        {/* <Route path="items" element={<ItemsDetails/>} /> */}
+        <Route path="shop/:id" element={<ItemsDetails />} />
 
       </Routes> 
      
-      <SideBar/>
+      <SideBar text="Asim Bhai Sainthal Wale "/>
       </div>
       <Footer/>
     </div>
