@@ -24,10 +24,6 @@ export default function ItemsDetails() {
         <h3>{Users.description}</h3>
         <h2>Price -₹{Users.price}</h2>
         <img src={Users.image} alt="img"/>
-        
-       
-      
-     
      </div>
     )
   }

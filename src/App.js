@@ -11,6 +11,8 @@ import Footer from "./pages/Footer";
 import SideBar from "./pages/SideBar";
 import ShopNow from "./pages/ShopNow";
 import ItemsDetails from "./pages/ItemsDetails";
+import AddtoCard from "./pages/AddtoCard";
+
 
 
 function App() {
@@ -41,7 +43,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="shop" element={<ShopNow />} />
-        {/* <Route path="items" element={<ItemsDetails/>} /> */}
+        <Route path="add" element={<AddtoCard/>} />
         <Route path="shop/:id" element={<ItemsDetails />} />
 
       </Routes> 
