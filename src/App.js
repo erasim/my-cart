@@ -1,4 +1,4 @@
-import  React from "react";
+import  React,{useState,useEffect} from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import "./pages/Style.css";
@@ -13,11 +13,14 @@ import ShopNow from "./pages/ShopNow";
 import ItemsDetails from "./pages/ItemsDetails";
 import AddToCard from "./pages/AddToCard";
 import Test from "./pages/Test";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
 
-
-function App(inputarr) {
+function App() {
+  var inputarr = JSON.parse(localStorage.getItem("arr"));
+  const [show, setShow] = useState(false);
+  const[count,setCount]=useState(0);
   console.log(inputarr.length);
   return (
     <div className="App">
@@ -32,6 +35,7 @@ function App(inputarr) {
     <li  > < Link to="/login" >Login</Link></li>
     <li >  <Link to="/signup">SignUp</Link></li>
     <li >  <Link to="/items">Items</Link></li>
+    <span className="ShoppingCartIcon"  onClick={() => setShow(!show)}><ShoppingCartIcon/>{inputarr.length}</span>
    
  
     
@@ -48,12 +52,35 @@ function App(inputarr) {
         <Route path="add" element={<AddToCard/>} />
         <Route path="shop/:id" element={<ItemsDetails />} />
         <Route path="test" element={<Test/>}/>
-
-
       </Routes> 
-     
       <SideBar text="Asim Bhai Sainthal Wale "/>
       </div>
+      { show ? (
+<table className='cart'>
+ { 
+ 
+ inputarr.map(
+            (info,ind)=>{ 
+                return(
+                    <tr key={ind}>
+                    <td>{info.name}</td>
+                    <td>{info.marks}</td>
+     
+                    </tr>
+                )
+            })
+         }
+         <p>Total Amount is: {count}</p>
+
+</table>
+) : null} 
+
+
+
+{
+  
+}
+
       <Footer/>
     </div>
   );

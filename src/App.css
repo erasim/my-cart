@@ -38,7 +38,7 @@ font-weight: bold;
   border: 5px solid blue;
   position: absolute;
   right: 0%;
-  top: -5px;
+  top: 150px;
   background-color: beige;
   border-radius: 5%;
 }
@@ -50,7 +50,7 @@ font-weight: bold;
 .ShoppingCartIcon{
 position: absolute;
 right: 3%;
-margin-top: -140px;
+margin-top: 5px;
 border: 2px solid red;
 padding: auto;
 }

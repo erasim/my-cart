@@ -1,7 +1,6 @@
 {
   "name": "my-cart",
   "version": "0.1.0",
-  "homepage": "https://gitname.github.io/erasim/my-cart", //for github used
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -23,8 +22,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",  //for github used
-    "deploy": "gh-pages -d build",  //for github used
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -47,8 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
 }

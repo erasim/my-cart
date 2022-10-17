@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Card ,Button} from 'react-bootstrap'
 import { useNavigate } from "react-router-dom";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 
 
 export default function ShopNow() {
@@ -10,7 +10,7 @@ export default function ShopNow() {
   const navigate = useNavigate();
   const [count, setCount]=useState(1);
   const[inputarr, setInputarr]= useState([]);
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
   const [total, setTotal] = useState(0);
   const getData = () => {
   
@@ -41,7 +41,9 @@ export default function ShopNow() {
               let name=item.title;
               let marks=item.price;
               setInputarr([...inputarr,{name,marks}])
-           
+              localStorage.setItem('arr', JSON.stringify(inputarr));
+              setTotal(total+marks);
+              console.log(inputarr);
               //  alert("New Item Added");
                   }}>Add To Card-{item.id}</Button><br/>  
 
@@ -54,13 +56,13 @@ export default function ShopNow() {
         </Card>
 
         })}
- <span className="ShoppingCartIcon"  onClick={() => setShow(!show)}><ShoppingCartIcon/>{inputarr.length}</span>
+ {/* <span className="ShoppingCartIcon"  onClick={() => setShow(!show)}><ShoppingCartIcon/>{inputarr.length}</span> */}
  
       
        
       
      
-      {show ? (
+      {/* {show ? (
 <table className='cart'>
 { inputarr.map(
             (info,ind)=>{ 
@@ -79,7 +81,7 @@ export default function ShopNow() {
          }
 <td >Total Amount{total}</td>
 </table>
-) : null}
+) : null} */}
 
     </div>
     
