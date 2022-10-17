@@ -11,13 +11,14 @@ import Footer from "./pages/Footer";
 import SideBar from "./pages/SideBar";
 import ShopNow from "./pages/ShopNow";
 import ItemsDetails from "./pages/ItemsDetails";
-import AddtoCard from "./pages/AddtoCard";
+import AddToCard from "./pages/AddToCard";
+import Test from "./pages/Test";
 
 
 
-function App() {
- 
- 
+
+function App(inputarr) {
+  console.log(inputarr.length);
   return (
     <div className="App">
      
@@ -31,6 +32,7 @@ function App() {
     <li  > < Link to="/login" >Login</Link></li>
     <li >  <Link to="/signup">SignUp</Link></li>
     <li >  <Link to="/items">Items</Link></li>
+   
  
     
     
@@ -43,8 +45,10 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="shop" element={<ShopNow />} />
-        <Route path="add" element={<AddtoCard/>} />
+        <Route path="add" element={<AddToCard/>} />
         <Route path="shop/:id" element={<ItemsDetails />} />
+        <Route path="test" element={<Test/>}/>
+
 
       </Routes> 
      
