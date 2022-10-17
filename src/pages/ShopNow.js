@@ -65,6 +65,7 @@ export default function ShopNow() {
 { inputarr.map(
             (info,ind)=>{ 
                 return(
+                 
                     <tr key={ind}>
                     <td>{info.name}</td>
                     <td>{info.marks}</td>
