@@ -1,4 +1,4 @@
-import  React,{useState,useEffect} from "react";
+import  React,{useState} from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import "./pages/Style.css";
@@ -14,14 +14,15 @@ import ItemsDetails from "./pages/ItemsDetails";
 import AddToCard from "./pages/AddToCard";
 import Test from "./pages/Test";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Popup from "./pages/Popup";
 
 
 
 function App() {
   var inputarr = JSON.parse(localStorage.getItem("arr"));
   const [show, setShow] = useState(false);
-  const[count,setCount]=useState(0);
-  console.log(inputarr.length);
+  
+  // console.log(inputarr.length);
   return (
     <div className="App">
      
@@ -52,6 +53,7 @@ function App() {
         <Route path="add" element={<AddToCard/>} />
         <Route path="shop/:id" element={<ItemsDetails />} />
         <Route path="test" element={<Test/>}/>
+        <Route path="popup" element={<Popup/>}/>
       </Routes> 
       <SideBar text="Asim Bhai Sainthal Wale "/>
       </div>
@@ -70,7 +72,7 @@ function App() {
                 )
             })
          }
-         <p>Total Amount is: {count}</p>
+         <p>Total Amount is: </p>
 
 </table>
 ) : null} 

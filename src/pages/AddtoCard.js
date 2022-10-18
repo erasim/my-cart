@@ -22,11 +22,17 @@ export default function AddToCard() {
 
   useEffect(() => {
     getData()
+
+    
   }, [])
 
   return (
+    
     <div className='Rightbox'>
+      <h2>Search Eneything</h2>
+    
       <h2>Shopping List</h2>
+ 
       <div className='Allitems'>
      
         {Users.map((item, i) => {

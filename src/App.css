@@ -54,3 +54,27 @@ margin-top: 5px;
 border: 2px solid red;
 padding: auto;
 }
+.searchBar{
+  width: 90%;
+  margin-bottom: 8%;
+height: 35px;
+border: 3px solid black;
+border-radius: 10px;
+font-weight: bold;
+font-size: larger;
+}
+.popup{
+
+    -webkit-animation: cssAnimation 5s forwards; 
+    animation: cssAnimation 5s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
