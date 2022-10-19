@@ -1,35 +1,17 @@
-import React,{useState, useEffect} from 'react'
-
+import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Popup() {
-//     const [showElement,setShowElement] = useState(true)
-//     useEffect(()=>{
-//       setTimeout(function() {
-//         setShowElement(false)
-//            }, 3000);
-//          },
-//      [])
-//   return (
-//     <div className='Rightbox'>
-// <div className='popup'>
-// <p>Item added Sussesfully</p>
-// </div>
-//     </div>
-//   )
-// }
-
-    const [showElement,setShowElement] = React.useState(true)
-    useEffect(()=>{
-      setTimeout(function() {
-        setShowElement(false)
-           }, 1000);
-         },
-     [])
-        
-    return(
-        <div className='Rightbox'>
-      <div className='popup'>
-         {showElement?<p>Item Added Sussesfully</p>:<></>} 
-      </div></div>
-    )
-  }
+    const showToastMessage = () => {
+        toast.success('Success Notification !', {
+            position: toast.POSITION.TOP_CENTER
+        });
+    };
+    return (
+        <div>
+            <button onClick={showToastMessage}>Notify</button>
+            <ToastContainer />
+        </div>
+    );
+}

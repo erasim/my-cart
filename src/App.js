@@ -18,6 +18,7 @@ import Popup from "./pages/Popup";
 
 
 
+
 function App() {
   var inputarr = JSON.parse(localStorage.getItem("arr"));
   const [show, setShow] = useState(false);
@@ -36,11 +37,8 @@ function App() {
     <li  > < Link to="/login" >Login</Link></li>
     <li >  <Link to="/signup">SignUp</Link></li>
     <li >  <Link to="/items">Items</Link></li>
-    <span className="ShoppingCartIcon"  onClick={() => setShow(!show)}><ShoppingCartIcon/>{inputarr.length}</span>
-   
- 
-    
-    
+    <span className="ShoppingCartIcon" 
+     onClick={() => setShow(!show)}><ShoppingCartIcon/>{inputarr.length}</span>    
   </ul>
   <div className="mainbar">
 <Routes>

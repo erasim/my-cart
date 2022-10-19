@@ -64,7 +64,7 @@ font-weight: bold;
 font-size: larger;
 }
 .popup{
-
+font-size: xx-large;
     -webkit-animation: cssAnimation 5s forwards; 
     animation: cssAnimation 5s forwards;
 }
