@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/erasim/my-cart/precache-manifest.4af0cb051a0c729f64f70a96604a671e.js"
+  "/my-cart/precache-manifest.22ad9cb8065bdd4d99c2e4f8feedd271.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/erasim/my-cart/index.html", {
+workbox.routing.registerNavigationRoute("/my-cart/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
